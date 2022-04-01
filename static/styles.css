@@ -30,15 +30,14 @@ body{
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     display: grid;
-    grid-template: 1fr 1fr / 1fr;
-    align-items: center;
-    padding: 10px 15px;
+    grid-template: 70px 1fr / 1fr;
+    align-items:flex-start;
+    margin: 15px 35px;
 }
 
-.header-title{
+.header-title-1{
     display: grid;
-    grid-template-columns: 70% 30%;
-    padding: 0px 15px;
+    grid-template-columns: 80% 20%;
 }
 
 .search-bar{
@@ -49,6 +48,7 @@ body{
 }
 
 input[type="text"]{
+    padding: 5px 20px;
     width: 60%;
     height: 2.5em;
     border: none;
@@ -63,22 +63,68 @@ input[type="text"]{
     justify-content: flex-end;
 }
 
-#prof-img{
+#prof-img-1{
     max-width: 50px;
     max-height: auto;
     padding-left: 1em;
 }
 
 #notif-bell, #search-icon{
-    margin-left: 20px;
     max-width: 30px;
     max-height: 30px;
 }
 
-#prof-name{
-    font-size: 1.2em;
+.profile-icons>.prof-name{
+    font-size: 1.2rem;
     font-weight: bold;
-    min-width: 100px;
+    min-width: 120px;
+}
+
+.header-title-2{
+    display:grid;
+    grid-template-columns: 70% 30%;
+}
+
+.left-title{
+    display:grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.welcome>.prof-name{
+    font-size: 1.6rem;
+    font-weight: bold;
+    min-width: 300px;
+}
+
+#prof-img-2{
+    max-width: 65px;
+    max-height: auto;
+}
+
+.right-title{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 5px;
+}
+
+.pink-btn{
+    background-color: #f472b6;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    width: 90%;
+    height: 50px;
 }
 
 .content{
@@ -89,12 +135,12 @@ input[type="text"]{
     grid-template-columns: 80% 20%;
     gap: 15px;
     background-color: #fdf2f8;
-    padding: 40px;
+    padding: 50px;
 }
 
 .title{
     position: relative;
-    top: -20px;
+    top: -28px;
 }
 
 .content>.title{
@@ -135,6 +181,10 @@ input[type="text"]{
 
 .card{
     height: 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    border-left: 4px inset;
 }
 
 ul>li{
