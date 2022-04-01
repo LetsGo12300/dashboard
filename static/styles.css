@@ -20,7 +20,7 @@ body{
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     display: grid;
-    grid-template-rows: 15% 1fr 1fr;
+    grid-template-rows: 10% 30% 30% 1fr;
     color: white;
     background-color: #ec4899;
     padding: 40px;
@@ -63,13 +63,24 @@ input[type="text"]{
     justify-content: flex-end;
 }
 
+#notif{
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    color: #f472b6;
+    margin-right: 1em;
+}
+
+#notif:hover{
+    color: #be185d;
+}
+
 #prof-img-1{
     max-width: 50px;
     max-height: auto;
-    padding-left: 1em;
 }
 
-#notif-bell, #search-icon{
+#search-icon{
     max-width: 30px;
     max-height: 30px;
 }
@@ -123,8 +134,13 @@ input[type="text"]{
     color: white;
     border: none;
     border-radius: 25px;
+    min-width: 100px;
     width: 90%;
     height: 50px;
+}
+
+.pink-btn:hover{
+    background-color: #be185d;
 }
 
 .content{
@@ -141,16 +157,20 @@ input[type="text"]{
 .title{
     position: relative;
     top: -28px;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 .content>.title{
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    font-weight: bold;
 }
 
 .card-container{
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    padding-top: 15px;
 }
 
 .card-title{
@@ -175,18 +195,61 @@ input[type="text"]{
 
 .card-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
+    padding-right: 15px;
 }
 
 .card{
     height: 200px;
     background-color: white;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    gap: 2px;
     padding: 20px;
-    border-radius: 20px;
-    border-left: 4px inset;
+    border-left: #f472b6 10px solid;
+    border-radius: 10px;
+}
+
+.card-info{
+    grid-row: 1 / 2;
+}
+
+.card-info>h2{
+    padding-bottom: 5px;
+}
+.card-icons{
+    justify-self: flex-end;
+    align-self: center;
+    grid-row: 2 / 3;
 }
 
 ul>li{
     list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+a{
+    color: white;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:active{
+    text-decoration: none;
 }
