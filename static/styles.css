@@ -10,9 +10,8 @@ body{
 }
 
 .container{
-    height:100vh;
     display: grid;
-    grid-template-rows: 20% 4fr;
+    grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr 5fr;
 }
 
@@ -31,7 +30,7 @@ body{
     grid-row: 1 / 2;
     display: grid;
     grid-template: 70px 1fr / 1fr;
-    align-items:flex-start;
+    align-items:center;
     margin: 15px 35px;
 }
 
@@ -93,7 +92,7 @@ input[type="text"]{
 
 .header-title-2{
     display:grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 1fr 1fr;
 }
 
 .left-title{
@@ -130,11 +129,12 @@ input[type="text"]{
 .pink-btn{
     background-color: #f472b6;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1.1em;
     color: white;
     border: none;
     border-radius: 25px;
     min-width: 100px;
+    max-width: 200px;
     width: 90%;
     height: 50px;
 }
@@ -148,23 +148,24 @@ input[type="text"]{
     grid-row: 2 / 3;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 75% 25%;
     gap: 15px;
     background-color: #fdf2f8;
     padding: 50px;
 }
 
-.title{
-    position: relative;
-    top: -28px;
+.side-card-title{
     font-weight: bold;
     font-size: 1.2em;
+    margin-bottom: 5px;
 }
 
 .content>.title{
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
     font-weight: bold;
+    font-size: 1.2em;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    margin-top: -1.8rem;
 }
 
 .card-container{
@@ -190,9 +191,42 @@ input[type="text"]{
 .announcements, .trending-items{
     display: flex;
     flex-direction: column;
+}
+
+.announcements{
+    background-color: #f472b6;
+    border-radius: 10px;
     gap: 5px;
 }
 
+.announcement-card{
+    background-color: white;
+    padding: 20px;
+}
+
+.announcement-title{
+    font-weight: bold;
+}
+
+.trending-items{
+    background-color: white;
+    padding: 30px;
+    gap: 15px;
+    overflow:auto;
+}
+
+.trending-card{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 10px;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.icon{
+    width: 50px;
+    height: auto;
+}
 .card-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -233,23 +267,28 @@ ul>li{
     margin-bottom: 8px;
 }
 
-a{
+li>a{
     color: white;
 }
 
-a:link{
+li>a:link, .trending-info>a:link{
     text-decoration: none;
 }
 
-a:visited{
+li>a:visited, .trending-info>a:visited{
     text-decoration: none;
 }
 
-a:hover{
+li>a:hover, .trending-info>a:hover{
     text-decoration: none;
     font-weight: bold;
 }
 
-a:active{
+li>a:active, .trending-info>a:active{
     text-decoration: none;
+}
+
+.trending-info>a{
+    color: black;
+    font-weight: bold
 }
